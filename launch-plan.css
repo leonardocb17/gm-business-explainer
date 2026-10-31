@@ -1,0 +1,97 @@
+@charset "UTF-8";
+.plan90 { min-width:0; border-top:1px solid var(--line); padding-top:40px; margin-top:44px; }
+.plan90 h2 { font-size:clamp(24px,2.4vw,32px); margin-bottom:18px; }
+.plan90 h3 { font-size:22px; margin-bottom:14px; }
+.plan90 h4 { font-size:15px; line-height:1.4; letter-spacing:-.015em; margin:0 0 12px; }
+.plan90 p,.plan90 li { font-size:14px; line-height:1.75; }
+.plan90 li+li { margin-top:7px; }
+.plan90 ul,.plan90 ol { padding-left:21px; margin-bottom:0; }
+.plan90 .kicker { font-size:10px; line-height:1.5; margin-bottom:9px; }
+.p90-heading>p:last-child,.p90-reason { color:var(--muted); max-width:780px; }
+.p90-recommendation { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:25px 0 18px; }
+.p90-card { min-width:0; background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:21px; }
+.p90-card h3 { margin:0; font-size:19px; line-height:1.35; }
+.p90-callout { padding:19px 22px; background:var(--orange-soft); border-left:3px solid var(--orange); border-radius:0 10px 10px 0; margin:24px 0; }
+.p90-callout p { margin:6px 0 0; }
+.p90-section { margin-top:42px; min-width:0; }
+.p90-tabs { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px; margin:22px 0 0; }
+.p90-tabs button { min-width:0; padding:15px 17px; background:transparent; border:1px solid var(--line); border-radius:9px 9px 0 0; text-align:left; line-height:1.4; }
+.p90-tabs button span { display:block; color:var(--muted); font-size:11px; margin-bottom:5px; }
+.p90-tabs button strong { display:block; font-size:13px; }
+.p90-tabs button[aria-selected="true"] { background:var(--forest); color:var(--white); border-color:var(--forest); }
+.p90-tabs button[aria-selected="true"] span { color:#c6ded3; }
+.p90-phase { display:none; padding:27px; background:var(--white); border:1px solid var(--line); border-radius:0 0 var(--radius) var(--radius); }
+.p90-phase.is-active { display:block; }
+.p90-print-period { display:none; }
+.p90-owners { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px; margin:25px 0; }
+.p90-owners article { min-width:0; }
+.p90-ai { background:var(--mint); border-radius:9px; padding:20px; margin-top:24px; }
+.p90-deliverables { margin:25px 0; }
+.p90-decision { border-top:1px solid var(--line); padding-top:20px; }
+.p90-decision p:last-child { margin-bottom:0; }
+.plan90 .p90-caption { font-size:12px; color:var(--muted); line-height:1.75; max-width:900px; margin-top:15px; }
+.p90-table-wrap { width:100%; min-width:0; overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--white); }
+.plan90 table { width:100%; border-collapse:collapse; font-size:12px; line-height:1.6; margin:0; }
+.plan90 table caption { text-align:left; padding:13px 16px; color:var(--muted); font-size:11px; border-bottom:1px solid var(--line); }
+.plan90 table th,.plan90 table td { padding:14px 16px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); }
+.plan90 table th { font-weight:650; }
+.plan90 thead th { color:var(--teal-dark); font-size:10px; background:var(--mint); text-transform:uppercase; letter-spacing:.05em; }
+.plan90 table tr:last-child>th,.plan90 table tr:last-child>td { border-bottom:0; }
+.p90-total { background:var(--mint); font-weight:700; }
+.p90-tools { min-width:660px; }
+.p90-tools th { width:20%; }
+.p90-tools td { width:26%; }
+.plan90 a { overflow-wrap:anywhere; }
+.p90-pilot-control { display:flex; gap:25px; align-items:center; padding:22px; background:var(--white); border:1px solid var(--line); border-radius:10px; margin:22px 0 8px; }
+.p90-pilot-control label { flex:0 0 220px; font-size:12px; font-weight:650; }
+.p90-pilot-control input { display:block; width:100%; margin-top:8px; padding:10px 13px; background:var(--paper); border:1px solid var(--line); border-radius:7px; font-variant-numeric:tabular-nums; }
+.p90-pilot-control p { color:var(--muted); margin:0; font-size:12px; }
+.p90-pilot-grid { display:grid; grid-template-columns:1.12fr .88fr; gap:22px; margin-top:18px; }
+.p90-pilot-grid>div { min-width:0; }
+.p90-pilot-grid table td { text-align:right; font-variant-numeric:tabular-nums; }
+.p90-ceilings article { border-bottom:1px solid var(--line); padding:13px 0; }
+.p90-ceilings article:first-child { padding-top:0; }
+.p90-ceilings article strong { display:block; font-size:22px; line-height:1.35; }
+.p90-ceilings p { color:var(--muted); font-size:12px; margin:10px 0 0; }
+.p90-ceilings .kicker { margin:0 0 8px; }
+.p90-negative,.p90-error { color:var(--red); }
+.p90-positive { color:var(--teal-dark); }
+.p90-error { font-size:12px !important; margin:0; }
+.p90-cadence { display:grid; gap:9px; }
+.p90-cadence li { padding-left:5px; }
+.p90-gates { border-top:1px solid var(--line); }
+.p90-gates details { border-bottom:1px solid var(--line); }
+.p90-gates summary { padding:17px 0; cursor:pointer; font-size:14px; font-weight:650; line-height:1.5; }
+.p90-gates details>div { padding:0 0 17px 20px; }
+.p90-gates p { margin-bottom:9px; }
+.p90-sources li { font-size:12px; margin-top:14px !important; }
+.p90-sources p { font-size:12px; color:var(--muted); margin:4px 0 0; }
+@media(max-width:760px) {
+  .p90-recommendation { grid-template-columns:1fr; gap:10px; }
+  .p90-card { padding:17px 20px; }
+  .p90-owners,.p90-pilot-grid { grid-template-columns:1fr; }
+  .p90-phase { padding:21px 18px; }
+  .p90-tabs { gap:5px; }
+  .p90-tabs button { padding:11px 9px; }
+  .p90-tabs button strong { font-size:11px; }
+  .p90-tabs button span { font-size:10px; }
+  .p90-pilot-control { display:block; padding:18px; }
+  .p90-pilot-control input { max-width:220px; margin-bottom:15px; }
+  .plan90 table th,.plan90 table td { padding:12px; }
+  .p90-owners { gap:22px; }
+}
+@media print {
+  .plan90 { margin-top:24px; padding-top:24px; }
+  .p90-tabs { display:none; }
+  .plan90 .p90-phase { display:block !important; margin:18px 0; border-radius:8px; }
+  .p90-print-period { display:block; font-size:11px !important; color:var(--teal-dark); }
+  .p90-table-wrap { overflow:visible; }
+  .p90-tools { min-width:0; }
+  .p90-section { break-inside:auto; margin-top:28px; }
+  .p90-card,.p90-owners article,.p90-ai,.p90-decision,.p90-gates details,.plan90 tr { break-inside:avoid; }
+  .p90-gates details>div { display:block !important; }
+  .p90-gates details::details-content { content-visibility:visible; }
+  .p90-pilot-control { display:none; }
+  .plan90 table { font-size:10px; }
+  .plan90 table th,.plan90 table td { padding:8px; }
+}

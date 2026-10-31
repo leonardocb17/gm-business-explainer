@@ -8,9 +8,12 @@
   <title>GM por dentro · Mapa de um negócio de mídia</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23153f38'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='35' font-family='sans-serif' fill='%23fff'%3Em%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="launch-plan.css">
   <script src="content.js" defer></script>
   <script src="model.js" defer></script>
   <script src="app.js" defer></script>
+  <script src="launch-plan.js" defer></script>
+  <script src="launch-plan-ui.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Ir para o conteúdo</a>
@@ -23,7 +26,7 @@
       <button data-slide="2"><span class="nav-number">03</span>De onde vem a receita</button>
       <button data-slide="3"><span class="nav-number">04</span>Siga o visitante</button>
       <button data-slide="4"><span class="nav-number">05</span>Faça as contas</button>
-      <button data-slide="5"><span class="nav-number">06</span>Como montar</button>
+      <button data-slide="5"><span class="nav-number">06</span>Plano de 90 dias</button>
       <button data-slide="6"><span class="nav-number">07</span>O que sabemos</button>
       <button data-slide="7"><span class="nav-number">08</span>Fontes e termos</button>
     </nav>
@@ -74,8 +77,11 @@
         <details class="disclosure"><summary>Fórmulas e limites do simulador</summary><div class="methodology"><p><strong>Páginas iniciais:</strong> conclusão do quiz × chegada ao conteúdo × páginas consumidas.</p><p><strong>Páginas de retorno:</strong> conclusão do quiz × captura válida de e-mail × retornos por contato × páginas por retorno.</p><p><strong>Receita por visitante:</strong> páginas em 90 dias × pageRPM ÷ 1.000 + comissões realizadas por visitante.</p><p><strong>CPC de equilíbrio:</strong> taxa de chegada × [receita por visitante × (1 − provisão tributária) − custo variável − fixos ÷ visitantes].</p><p>O CPC para margem de 20% reserva também 20% da receita. Tetos negativos indicam que nem tráfego gratuito atinge o objetivo. Receita atribuída não é recebimento imediato. As coortes são simplificadas, sem sazonalidade, saturação ou retorno além de 90 dias. A provisão tributária de 8% é hipótese, não alíquota verificada. Comissão adicional pressupõe contrato, atribuição válida e ausência de estorno.</p></div></details>
       </section>
       <section class="slide" data-panel="5" hidden aria-labelledby="title-5">
-        <div class="slide-header"><p class="eyebrow">DA PESQUISA A UMA OPERAÇÃO PRÓPRIA</p><h1 id="title-5">Começar pequeno.<br>Medir antes de ampliar.</h1><p>Reproduzir a lógica comercial exige validar contratos e aquisição. O primeiro objetivo é provar a economia de um país e uma oferta.</p></div>
+        <div class="slide-header"><p class="eyebrow">DOIS SÓCIOS · IA · UM TESTE COM LIMITE</p><h1 id="title-5">Os primeiros 90 dias.<br>Medir antes de ampliar.</h1><p>Um plano proposto para a nossa operação: país, oferta, orçamento e responsabilidades. As etapas são escolhas de planejamento, não práticas internas comprovadas da GM.</p></div>
+        <div id="plan90"></div>
+        <details class="disclosure"><summary>Consultar o roteiro geral de montagem</summary>
         <div class="two-columns"><div class="playbook-list" id="playbook-list"></div><article class="card" id="playbook-detail" aria-live="polite"></article></div>
+        </details>
         <div class="card-grid two"><article class="card"><p class="kicker">SÓCIO 1 · DISTRIBUIÇÃO E RECEITA</p><h3>Aquisição, parceiros e medição</h3><p>Negociar ofertas e permissões de tráfego, criar testes, acompanhar custos e reconciliar conversões aprovadas, recusadas e pagas.</p></article><article class="card"><p class="kicker">SÓCIO 2 · PRODUTO E RELACIONAMENTO</p><h3>Conteúdo, tecnologia e e-mail</h3><p>Construir páginas, revisar ofertas, cuidar do consentimento, da base de contatos e da entrega. IA auxilia rascunhos, variantes e análises; revisão humana valida condições e promessas.</p></article></div>
         <details class="disclosure"><summary>Ofertas públicas para explorar numa operação própria</summary><p>São referências de programas. A aceitação do editor, do produto e da origem de tráfego precisa ser confirmada. Não constituem a lista de contratos da GM.</p><div id="build-programs"></div></details>
         <details class="disclosure"><summary>Custos iniciais, compra de tráfego e infraestrutura</summary><div id="build-notes"></div></details>

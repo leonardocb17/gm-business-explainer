@@ -5,7 +5,7 @@
   const $ = id => document.getElementById(id);
   const esc = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const countryNames = {BR:'Brasil',MX:'México',US:'EUA',CA:'Canadá'};
-  const chapterNames = ['Comece aqui','Mapa do grupo','De onde vem a receita','Siga o visitante','Faça as contas','Como montar','O que sabemos','Fontes e termos'];
+  const chapterNames = ['Comece aqui','Mapa do grupo','De onde vem a receita','Siga o visitante','Faça as contas','Plano de 90 dias','O que sabemos','Fontes e termos'];
   const hashes = ['visao','grupo','receita','caminhos','numeros','montar','evidencias','fontes'];
   let chapter = 0, entityKind = 'todos', selectedEntity = D.entities[0].id, routeCountry = 'BR', routeId = 'BR187', routeStep = 0, phase = 0;
   const sourceMap = new Map(D.sources.map(s => [s.id,s]));
