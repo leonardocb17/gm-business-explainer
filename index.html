@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Uma apresentação independente sobre o modelo de mídia da GM: marcas, campanhas, monetização, fontes e um simulador financeiro transparente.">
+  <meta name="theme-color" content="#153f38">
+  <title>GM por dentro · Mapa de um negócio de mídia</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23153f38'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='35' font-family='sans-serif' fill='%23fff'%3Em%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="content.js" defer></script>
+  <script src="model.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
+<div class="app-shell">
+  <aside class="sidebar" aria-label="Navegação da apresentação">
+    <a class="brand" href="#visao"><span class="brand-mark">m.</span><span>GM por dentro<small>Mapa de um negócio de mídia</small></span></a>
+    <nav class="nav-list" aria-label="Capítulos">
+      <button data-slide="0" class="active"><span class="nav-number">01</span>Comece aqui</button>
+      <button data-slide="1"><span class="nav-number">02</span>Mapa do grupo</button>
+      <button data-slide="2"><span class="nav-number">03</span>De onde vem a receita</button>
+      <button data-slide="3"><span class="nav-number">04</span>Siga o visitante</button>
+      <button data-slide="4"><span class="nav-number">05</span>Faça as contas</button>
+      <button data-slide="5"><span class="nav-number">06</span>Como montar</button>
+      <button data-slide="6"><span class="nav-number">07</span>O que sabemos</button>
+      <button data-slide="7"><span class="nav-number">08</span>Fontes e termos</button>
+    </nav>
+    <div class="sidebar-foot"><span class="mini-badge">Pesquisa independente</span><p>Uma leitura das evidências públicas.<br>Sem vínculo com a GM.</p><small>Pesquisa: 30–31 out. 2026</small></div>
+  </aside>
+  <div class="main-shell">
+    <header class="topbar"><span class="eyebrow" id="chapter-label">01 / 08 · Comece aqui</span><div class="top-actions"><button class="button ghost" id="fullscreen">Apresentar</button><button class="button ghost" id="print">Imprimir</button></div></header>
+    <main id="main" tabindex="-1">
+      <section class="slide" data-panel="0" aria-labelledby="title-0">
+        <div class="hero-grid">
+          <div class="hero-copy"><p class="eyebrow">UM MODELO PARA ENTENDER, TESTAR E MEDIR</p><h1 class="hero-title" id="title-0">Uma operação de mídia.<br><em>Várias portas de entrada.</em></h1><p class="hero-lead">A GM reúne portais e campanhas que atraem pessoas interessadas em crédito. O percurso passa por quizzes, conteúdo, anúncios e encaminhamentos para instituições financeiras.</p><button class="button primary" data-go="1">Explorar o mapa <span aria-hidden="true">→</span></button><p class="small muted">Leia em sequência ou escolha um capítulo no menu.</p></div>
+          <div class="hero-art" aria-label="Resumo do modelo: atrair, relacionar e monetizar"><div class="flow-stack"><div class="flow-node"><span>01 / ATRAIR</span><strong>Uma pessoa busca crédito</strong><small>Campanhas no Google e na Meta</small></div><span class="flow-arrow" aria-hidden="true">↓</span><div class="flow-node"><span>02 / RELACIONAR</span><strong>Quiz → contato → conteúdo</strong><small>Marcas diferentes, infraestrutura compartilhada</small></div><span class="flow-arrow" aria-hidden="true">↓</span><div class="flow-node"><span>03 / MONETIZAR</span><strong>Publicidade + encaminhamentos</strong><small>Retornos por e-mail podem repetir a visita</small></div></div></div>
+        </div>
+        <div class="metrics-strip"><div class="metric"><strong id="asset-count">6 + 1</strong><span>portais editoriais + buscador declarados</span></div><div class="metric"><strong>8</strong><span>rotas de campanha examinadas</span></div><div class="metric"><strong>4</strong><span>mercados nos funis desta amostra</span></div></div>
+        <div class="section-note"><strong>O ponto principal.</strong> O visitante pode gerar receita publicitária antes de chegar ao banco. Um encaminhamento também pode gerar comissão, quando existe contrato e o evento exigido acontece. Cadastro no quiz e aprovação de crédito são coisas diferentes.</div>
+      </section>
+      <section class="slide" data-panel="1" hidden aria-labelledby="title-1">
+        <div class="slide-header"><p class="eyebrow">ESTRUTURA E RELAÇÕES</p><h1 id="title-1">Uma empresa por trás.<br>Diferentes marcas na frente.</h1><p>Selecione um nome para ver o papel, a evidência e o que a relação permite concluir.</p></div>
+        <div class="chips" id="entity-filters" aria-label="Filtrar entidades"></div>
+        <div class="two-columns"><div class="entity-grid" id="entity-grid"></div><aside class="entity-detail card" id="entity-detail" aria-live="polite"></aside></div>
+        <div class="section-note">Mesmo CNPJ declarado nos sites é uma evidência de operação comum. Página anunciante, fornecedor de tecnologia e instituição financeira são relações distintas; não equivalem automaticamente a participação societária.</div>
+      </section>
+      <section class="slide" data-panel="2" hidden aria-labelledby="title-2">
+        <div class="slide-header"><p class="eyebrow">A LÓGICA ECONÔMICA</p><h1 id="title-2">Uma visita pode ter<br>mais de uma fonte de receita.</h1><p>Explore os três mecanismos e veja onde o dinheiro depende de uma condição ainda não medida.</p></div>
+        <div class="chips" id="money-tabs" aria-label="Mecanismos de monetização"><button data-money="ads" class="active" aria-pressed="true">Publicidade no site</button><button data-money="affiliate" aria-pressed="false">Encaminhamentos</button><button data-money="email" aria-pressed="false">Retorno por e-mail</button></div>
+        <div class="economic-story" id="money-detail" aria-live="polite"></div>
+        <div class="card-grid three"><article class="card"><p class="kicker">CUSTO DE AQUISIÇÃO</p><h3>Comprar a chegada</h3><p>O anunciante paga pela mídia. Parte dos cliques pode não carregar o quiz. CPC é custo por clique, não por contato.</p></article><article class="card"><p class="kicker">RECEITA PUBLICITÁRIA</p><h3>Monetizar as páginas</h3><p>A rede remunera publicidade conforme suas regras. Uma requisição de anúncio não prova impressão paga nem faturamento.</p></article><article class="card"><p class="kicker">RECEITA DE AFILIAÇÃO</p><h3>Validar o evento</h3><p>A rede ou instituição precisa aceitar a origem do tráfego e validar o evento do contrato. O pagamento pode sofrer recusa ou estorno.</p></article></div>
+        <details class="disclosure"><summary>Parceiros e fornecedores: o que foi identificado?</summary><div id="provider-list"></div></details>
+      </section>
+      <section class="slide" data-panel="3" hidden aria-labelledby="title-3">
+        <div class="slide-header"><p class="eyebrow">O PERCURSO REAL</p><h1 id="title-3">Do anúncio ao produto final.</h1><p>Escolha o país, a campanha e uma etapa. Os links permitem abrir as páginas de origem.</p></div>
+        <div class="chips" id="route-countries" aria-label="País da campanha"></div><label class="control route-picker"><span>Campanha examinada</span><select id="route-select"></select></label>
+        <div id="route-summary" class="offer-summary"></div><div id="journey" class="journey" aria-label="Etapas do percurso"></div><div id="route-detail" class="route-detail card" aria-live="polite"></div>
+        <div class="callout warning"><strong>Como verificamos.</strong> Seguimos páginas e links públicos. O caminho brasileiro com “ver indicação” foi percorrido sem cadastro. Outros caminhos foram continuados pelas rotas públicas configuradas no quiz. Isso não demonstra o resultado após enviar um cadastro, nem todos os possíveis ramos. Nenhuma solicitação de crédito foi enviada.</div>
+      </section>
+      <section class="slide" data-panel="4" hidden aria-labelledby="title-4">
+        <div class="slide-header"><p class="eyebrow">SIMULADOR · TODOS OS VALORES EM REAIS</p><h1 id="title-4">O negócio fecha a conta?</h1><p>Altere as premissas e veja a receita em 90 dias, o CPC máximo e o volume necessário para a meta anual.</p></div>
+        <div class="callout"><strong>Este é um cenário, não a contabilidade da GM.</strong> Países, rendimentos e conversões não foram medidos. Comissões começam em zero para isolar publicidade; a GM declara monetização por parceiros. Dois sócios trabalham sem remuneração no modelo.</div>
+        <div class="calculator-layout"><div class="card calculator-controls"><div class="controls-grid"><label class="control"><span>País</span><select id="calc-country"><option value="BR">Brasil</option><option value="MX">México</option><option value="US">EUA</option><option value="CA">Canadá</option></select></label><label class="control"><span>Cenário de partida</span><select id="calc-scenario"><option value="conservative">Conservador</option><option value="base" selected>Base</option><option value="strong">Forte</option></select></label></div>
+          <label class="control"><span>Receita recebida por mil páginas <output id="rpm-value"></output></span><input id="calc-rpm" type="range" min="0" max="250" step="1" value="30"><small>PageRPM após a parcela da rede, antes dos custos do negócio.</small></label>
+          <label class="control"><span>Retornos em 90 dias por contato <output id="returns-value"></output></span><input id="calc-returns" type="range" min="0" max="5" step="0.1" value="0.8"><small>Visitas adicionais ao site, não aberturas de e-mail.</small></label>
+          <div class="controls-grid"><label class="control"><span>CPC pago (R$)</span><input id="calc-cpc" type="number" min="0" max="100" step="0.01" value="0.10"></label><label class="control"><span>Novos visitantes por mês</span><input id="calc-visitors" type="number" min="1" max="100000000" step="1000" value="100000"></label></div>
+          <label class="control"><span>Comissão realizada por visitante em 90 dias (R$)</span><input id="calc-affiliate" type="number" min="0" max="1000" step="0.01" value="0"><small>Receita total de comissões validadas ÷ visitantes adquiridos. Não é o valor pago por cartão.</small></label>
+          <details class="advanced"><summary>Ver e ajustar o restante das premissas</summary><div class="controls-grid" id="advanced-controls"></div></details>
+          <button id="calc-reset" class="button ghost">Restaurar cenário</button>
+        </div><div><div id="calc-results" class="result-grid" aria-live="polite"></div><div id="revenue-chart" class="card chart-bars"></div><p class="small muted" id="calc-explanation"></p></div></div>
+        <div class="slide-header section-subhead"><h2>O que exige faturar R$ 5 milhões por ano?</h2><p>Operação madura, com o mesmo rendimento por visitante. Aqui os fixos passam a R$ 15 mil/mês. O modelo não garante disponibilidade de tráfego nesse volume.</p></div><div id="scale-results" class="result-grid"></div><div id="scale-note" class="section-note"></div>
+        <details class="disclosure"><summary>Fórmulas e limites do simulador</summary><div class="methodology"><p><strong>Páginas iniciais:</strong> conclusão do quiz × chegada ao conteúdo × páginas consumidas.</p><p><strong>Páginas de retorno:</strong> conclusão do quiz × captura válida de e-mail × retornos por contato × páginas por retorno.</p><p><strong>Receita por visitante:</strong> páginas em 90 dias × pageRPM ÷ 1.000 + comissões realizadas por visitante.</p><p><strong>CPC de equilíbrio:</strong> taxa de chegada × [receita por visitante × (1 − provisão tributária) − custo variável − fixos ÷ visitantes].</p><p>O CPC para margem de 20% reserva também 20% da receita. Tetos negativos indicam que nem tráfego gratuito atinge o objetivo. Receita atribuída não é recebimento imediato. As coortes são simplificadas, sem sazonalidade, saturação ou retorno além de 90 dias. A provisão tributária de 8% é hipótese, não alíquota verificada. Comissão adicional pressupõe contrato, atribuição válida e ausência de estorno.</p></div></details>
+      </section>
+      <section class="slide" data-panel="5" hidden aria-labelledby="title-5">
+        <div class="slide-header"><p class="eyebrow">DA PESQUISA A UMA OPERAÇÃO PRÓPRIA</p><h1 id="title-5">Começar pequeno.<br>Medir antes de ampliar.</h1><p>Reproduzir a lógica comercial exige validar contratos e aquisição. O primeiro objetivo é provar a economia de um país e uma oferta.</p></div>
+        <div class="two-columns"><div class="playbook-list" id="playbook-list"></div><article class="card" id="playbook-detail" aria-live="polite"></article></div>
+        <div class="card-grid two"><article class="card"><p class="kicker">SÓCIO 1 · DISTRIBUIÇÃO E RECEITA</p><h3>Aquisição, parceiros e medição</h3><p>Negociar ofertas e permissões de tráfego, criar testes, acompanhar custos e reconciliar conversões aprovadas, recusadas e pagas.</p></article><article class="card"><p class="kicker">SÓCIO 2 · PRODUTO E RELACIONAMENTO</p><h3>Conteúdo, tecnologia e e-mail</h3><p>Construir páginas, revisar ofertas, cuidar do consentimento, da base de contatos e da entrega. IA auxilia rascunhos, variantes e análises; revisão humana valida condições e promessas.</p></article></div>
+        <details class="disclosure"><summary>Ofertas públicas para explorar numa operação própria</summary><p>São referências de programas. A aceitação do editor, do produto e da origem de tráfego precisa ser confirmada. Não constituem a lista de contratos da GM.</p><div id="build-programs"></div></details>
+        <details class="disclosure"><summary>Custos iniciais, compra de tráfego e infraestrutura</summary><div id="build-notes"></div></details>
+        <details class="disclosure"><summary>O que automatizar com IA e o que precisa de revisão?</summary><div class="table-wrap"><table><thead><tr><th>Etapa</th><th>Uso de IA</th><th>Controle necessário</th></tr></thead><tbody><tr><td>Conteúdo e tradução</td><td>Rascunhar, adaptar idioma, comparar versões</td><td>Confirmar condições na fonte oficial e revisão humana</td></tr><tr><td>Criativos e e-mails</td><td>Gerar variantes e organizar testes</td><td>Evitar promessas de aprovação; seguir contrato e consentimento</td></tr><tr><td>Relatórios</td><td>Explicar variações e apontar hipóteses</td><td>Código calcula; relatórios conciliados sustentam decisões</td></tr><tr><td>Operação</td><td>Alertas, atualização de links, classificação de respostas</td><td>Pessoas resolvem exceções, reclamações e decisões comerciais</td></tr></tbody></table></div></details>
+      </section>
+      <section class="slide" data-panel="6" hidden aria-labelledby="title-6">
+        <div class="slide-header"><p class="eyebrow">EVIDÊNCIA E INCERTEZA</p><h1 id="title-6">O que a pesquisa sustenta.</h1><p>Uma página pública pode provar uma declaração ou um caminho. Ela não revela automaticamente tráfego, contratos e lucro.</p></div>
+        <div class="card-grid two"><article class="card"><span class="status proven">Observado ou documentado</span><div id="known-list"></div></article><article class="card"><span class="status unknown">Ainda desconhecido</span><div id="gap-list"></div></article></div>
+        <div class="card"><p class="kicker">A HIPÓTESE DOS MILHÕES</p><h2>Volume pode explicar faturamento.<br>Não demonstra lucro.</h2><p>A GM declara 8 milhões de visualizações mensais. Se fossem páginas vistas constantes, R$ 5 milhões anuais em publicidade exigiriam pageRPM recebido de <strong id="required-rpm">R$ 52,08</strong>. A definição de visualizações e o volume não foram auditados. A faixa de faturamento mencionada na pesquisa é uma estimativa de terceiros, não uma demonstração financeira.</p><p class="small muted">Não conhecemos o investimento em mídia, a margem, a parcela internacional ou o rendimento da base de e-mail.</p></div>
+        <details class="disclosure"><summary>Como a investigação foi feita e quais são os limites?</summary><p>Foram combinadas páginas públicas, bibliotecas de anúncios da Meta e Google, leitura de código público com REA, capturas de redirecionamentos e testes geográficos anteriores. O código foi analisado sem acesso ao servidor privado. Os testes de VPN em páginas selecionadas não mostraram troca de destino apenas por país; isso não permite concluir que outros caminhos, dispositivos ou campanhas sejam iguais.</p><p>Os anúncios revelaram entradas específicas por país e produto. Essa evidência corrigiu a ênfase anterior em páginas editoriais internacionais. Não houve solicitação de crédito. A tentativa anterior de cadastro de teste não comprovou inscrição nem recebimento de e-mails. Os números do simulador são calculados, não medidos na GM.</p></details>
+      </section>
+      <section class="slide" data-panel="7" hidden aria-labelledby="title-7">
+        <div class="slide-header"><p class="eyebrow">CONSULTA E VERIFICAÇÃO</p><h1 id="title-7">Fontes abertas.<br>Termos em linguagem simples.</h1><p>As fontes sustentam afirmações específicas. Programas de afiliados públicos não comprovam contratos da GM.</p></div>
+        <div class="chips" id="source-tabs"><button data-source-tab="sources" class="active" aria-pressed="true">Fontes</button><button data-source-tab="glossary" aria-pressed="false">Glossário</button></div>
+        <div id="sources-view"><label class="control"><span>Encontrar uma fonte</span><input type="search" id="source-search" placeholder="Ex.: Klar, privacidade, Meta"></label><div id="source-list" class="source-grid"></div></div><div id="glossary-view" hidden class="glossary-grid"></div>
+      </section>
+    </main>
+    <footer class="chapter-footer"><div class="progress" aria-hidden="true"><span id="progress-fill"></span></div><span id="progress-text">Capítulo 1 de 8</span><div class="navigation-controls"><button class="nav-button" id="previous" disabled>← Anterior</button><button class="nav-button" id="next">Próximo →</button></div></footer>
+  </div>
+</div>
+<noscript><p>Ative JavaScript para navegar pela apresentação e usar o simulador.</p></noscript>
+</body>
+</html>

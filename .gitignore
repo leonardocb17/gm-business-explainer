@@ -1,0 +1,6 @@
+_tmp/
+node_modules/
+.env*
+*.log
+.DS_Store
+CONTEXT.md
